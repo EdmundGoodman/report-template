@@ -48,7 +48,10 @@
 \setcounter{biburlucpenalty}{8000}
 
 % Configure custom title section
-\makeatletter         
+% Abstracts can optional be defined as with titles/authors through the `\abstracttext{Text...}` command
+\makeatletter
+\newcommand{\@abstracttext}[0]{}
+\newcommand{\abstracttext}[1]{\renewcommand{\@abstracttext}{#1}}
 \renewcommand\maketitle{
 {\raggedright
 \begin{center}
@@ -56,6 +59,12 @@
     {\Large{\@author}} \\[0.5em]
     {\normalsize\textit{\@date}}
 \end{center}
-\vspace{5mm}
-}}
+}
+\ifdefempty{\@abstracttext}{}{
+    \renewcommand{\abstractname}{\vspace{-\baselineskip}}
+    \begin{abstract}
+        \noindent\ignorespaces\@abstracttext
+    \end{abstract}
+}
+}
 \makeatother
