@@ -1,100 +1,55 @@
 \documentclass[12pt]{article}
 \input{preamble}
+
+
+
+\title{Essay title}
+\author{Edmund Goodman}
+\date{\today}
+
 \begin{document}
-
-\begin{center}
-    \Huge\textbf{Essay Title} \\
-    \vspace{2mm}
-    \large{\today\ -- Word count: xyz}
-\end{center}
-\vspace{5mm}
-
-
-%%% Introduction
-\section{Introduction}
-% Hook
-% Angle of argument and link to back hook/onwards
-This essay explores ...
+\maketitle
 
 
 
-%%% Paper 1 technical discussion
-\section{Discussion and critique of ``Paper 1'' \cite{}}
-%% Link from existing work
-% Hook
-% Argument
-% Link
+\section{Snippets}
+\label{sec:snippets}
 
-%% Novel aspect of paper
-% Hook
-% Argument
-% Link
+Donald Knuth wrote The Art of Computer Programming \cite{knuth1997art}.
 
-%% Critique of paper
-% Hook
-% Argument
-% Link
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image-a}
+    \caption{An example image.}
+    \label{fig:example-image-a}
+\end{figure}
 
-
-
-%%% Paper 2 technical discussion
-\section{Discussion and critique of ``Paper 2'' \cite{}}
-%% Link from existing work
-% Hook
-% Argument
-% Link
-
-%% Novel aspect of paper
-% Hook
-% Argument
-% Link
-
-%% Critique of paper
-% Hook
-% Argument
-% Link
-
-
-
-%%% Comparison and critique (strengths and weaknesses)
-\section{Critical comparison}
-
-%% Comparison of contexts and goals
-% Hook
-% Argument
-% Link
-
-%% Comparison of critiques (strengths and weaknesses)
-% Hook
-% Argument
-% Link
-
-
-
-%%% Future work
-\section{Future work}
-%% Future work
-% Hook
-% Argument
-% Link
-
-
-
-%%% Conclusion
-\section{Conclusion}
-%% Future work
-% Hook
-% Argument
-% Link
+\begin{listing}[H]
+    \begin{minted}{haskell}
+        newtype Lasagne = Lasagne Int
+            deriving (Show, Num)
+        
+        -- The stacking operating can be considered integer 
+        -- addition of the number of layers
+        instance Semigroup Lasagne where
+            (<>) = (+)
+        
+        -- The identity element is the empty (zero-layer) Lasagne
+        instance Monoid Lasagne where
+            mempty = Lasagne 0
+        
+        -- Stacking 5 and 6 layers gives 11 layers:
+        --
+        -- ghci> Lasagne 5 <> Lasagne 6
+        -- Lasagne 11
+    \end{minted}
+    \caption{A Haskell implementation of the Lasagne monoid.}
+    \label{listing:haskell-lasagne-monoid}
+\end{listing}
 
 
 
 \printbibliography[heading=bibnumbered]
-% \bibliographystyle{IEEEtran}
-% \bibliography{references}
-
-
-
 \appendix
 
 \end{document}

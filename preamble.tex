@@ -1,34 +1,61 @@
+% Set paper geometry
 \usepackage{geometry}
 \geometry{a4paper,total={170mm,257mm}}
 
+% Set font
 \usepackage{fontspec}
 \setmainfont{Linux Libertine O}[Ligatures={Common}]
 \setmonofont{Fira Code}[Contextuals=Alternate]
 
+% Include useful packages
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{appendix}
 \usepackage{placeins}
 
+% Configure hyperlinks
 \usepackage{url}
 \usepackage{hyperref}
-% TODO: Add some hyperref config here...
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=black,
+	citecolor=black
+}
 
-\usepackage[numbib]{tocbibind}
-\usepackage[citestyle=ieee]{biblatex}
-\addbibresource{references.bib}
-% https://stackoverflow.com/a/43593557
-\setcounter{biburllcpenalty}{7000}
-\setcounter{biburlucpenalty}{8000}
-
+% Style paragraphs
 \usepackage{parskip}
 \setlength{\parindent}{0pt}
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
 
-\usepackage{minted}
-\setminted{escapeinside=||,linenos,breaklines,autogobble}
-
+% Style captions
 \usepackage{caption}
 \captionsetup{labelfont=bf,width=0.8 \textwidth}
-\newenvironment{code}{\captionsetup{type=listing}}{}
+
+% Set up code highlight
+\usepackage{minted}
+\setminted{escapeinside=||,linenos,breaklines,autogobble}
+%% Support listings which wrap over pages
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
+
+% Configure bibliography
+\usepackage[numbib]{tocbibind}
+\usepackage[citestyle=ieee]{biblatex}
+\addbibresource{references.bib}
+%% Avoid overflowing URLs (https://stackoverflow.com/a/43593557)
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+% Configure custom title section
+\makeatletter         
+\renewcommand\maketitle{
+{\raggedright
+\begin{center}
+    {\Huge\textbf{\@title}} \\[0.5em]
+    {\Large{\@author}} \\[0.5em]
+    {\normalsize\textit{\@date}}
+\end{center}
+\vspace{5mm}
+}}
+\makeatother
