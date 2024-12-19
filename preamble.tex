@@ -1,0 +1,34 @@
+\usepackage{geometry}
+\geometry{a4paper,total={170mm,257mm}}
+
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}[Ligatures={Common}]
+\setmonofont{Fira Code}[Contextuals=Alternate]
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{placeins}
+
+\usepackage{url}
+\usepackage{hyperref}
+% TODO: Add some hyperref config here...
+
+\usepackage[numbib]{tocbibind}
+\usepackage[citestyle=ieee]{biblatex}
+\addbibresource{references.bib}
+% https://stackoverflow.com/a/43593557
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\usepackage{minted}
+\setminted{escapeinside=||,linenos,breaklines,autogobble}
+
+\usepackage{caption}
+\captionsetup{labelfont=bf,width=0.8 \textwidth}
+\newenvironment{code}{\captionsetup{type=listing}}{}
