@@ -14,7 +14,7 @@
 \section{Snippets}
 \label{sec:snippets}
 
-Donald Knuth wrote The Art of Computer Programming \cite{knuth1997art}.
+Donald Knuth  wrote The Art of Computer Programming \cite{knuth1997art}.
 
 \begin{figure}[H]
     \centering
@@ -27,16 +27,16 @@ Donald Knuth wrote The Art of Computer Programming \cite{knuth1997art}.
     \begin{minted}{haskell}
         newtype Lasagne = Lasagne Int
             deriving (Show, Num)
-        
-        -- The stacking operating can be considered integer 
+
+        -- The stacking operating can be considered integer
         -- addition of the number of layers
         instance Semigroup Lasagne where
             (<>) = (+)
-        
+
         -- The identity element is the empty (zero-layer) Lasagne
         instance Monoid Lasagne where
             mempty = Lasagne 0
-        
+
         -- Stacking 5 and 6 layers gives 11 layers:
         --
         -- ghci> Lasagne 5 <> Lasagne 6

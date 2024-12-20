@@ -1,0 +1,11 @@
+{
+    // General settings
+    "editor.minimap.enabled": false,
+    // Project settings
+	"latex-workshop.latex.recipe.default": "latexmk (latexmkrc)",
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "[bibtex]": {
+      "editor.defaultFormatter": "James-Yu.latex-workshop"
+    }
+}
