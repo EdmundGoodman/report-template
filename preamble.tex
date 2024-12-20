@@ -61,6 +61,10 @@
 \end{center}
 }
 \ifdefempty{\@abstracttext}{}{
+    %% Simple abstract
+    % \section*{Abstract}
+    % \@abstracttext
+    %% Abstract environment without heading
     \renewcommand{\abstractname}{\vspace{-\baselineskip}}
     \begin{abstract}
         \noindent\ignorespaces\@abstracttext
