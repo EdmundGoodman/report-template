@@ -1,9 +1,9 @@
-name: dissertation
+name: release
 
 on:
   push:
     paths:
-    - ".github/workflows/dissertation.yml"
+    - ".github/workflows/release.yml"
   workflow_dispatch:
 
 jobs:
