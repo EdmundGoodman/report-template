@@ -52,6 +52,9 @@
 \makeatletter
 \newcommand{\@abstracttext}[0]{}
 \newcommand{\abstracttext}[1]{\renewcommand{\@abstracttext}{#1}}
+\newcommand{\@abstractkeywords}[0]{}
+\newcommand{\abstractkeywords}[1]{\renewcommand{\@abstractkeywords}{#1}}
+
 \renewcommand\maketitle{
 {\raggedright
 \begin{center}
@@ -64,10 +67,18 @@
     %% Simple abstract
     % \section*{Abstract}
     % \@abstracttext
+    % \ifdefempty{\@abstractkeywords}{}{
+    %     \\\\
+    %     \textbf{Keywords: }\@abstractkeywords
+    % }
     %% Abstract environment without heading
     \renewcommand{\abstractname}{\vspace{-\baselineskip}}
     \begin{abstract}
         \noindent\ignorespaces\@abstracttext
+        \ifdefempty{\@abstractkeywords}{}{
+            \\\\
+            \noindent\ignorespaces\textbf{Keywords: }\@abstractkeywords
+        }
     \end{abstract}
 }
 }
