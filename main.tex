@@ -1,29 +1,29 @@
 \documentclass[12pt]{article}
 \input{preamble}
 
+
+\usepackage{amsmath}
+
 \title{Essay title}
 \author{Edmund Goodman}
 \date{\today}
-% \abstracttext{This is an optional abstract...}
-% \abstractkeywords{Optional, Keywords, Here}
+\abstracttext{This is an optional abstract...}
+\abstractkeywords{Optional, Keywords, Here}
+\wordcount{83}
 
 
 \begin{document}
 \maketitle
 
+\section{Introduction}
+\label{sec:introduction}
 
+In 1968, Donald Knuth published the first volume of ``The Art of Computer Programming'' \cite{knuth1997art}, which would later be one of the first documents to be typeset in \TeX.
+
+It's derivative, \LaTeX, can easily typeset the majority of what a computer scientist might like to right whilst avoiding the scourge of Microsoft. For example, syntax-highlighted code shown in Listing \ref{listing:haskell-lasagne-monoid}, individual images shown in Figure \ref{fig:example-image-a}, side-by-side images shown in Figure \ref{fig:side-by-side}, single and multi-line equations shown in Equations \ref{eq:amdahls-law} and \ref{eq:gustafsons-law} respectively, and references to sections such as §\ref{sec:snippets}.
 
 \section{Snippets}
 \label{sec:snippets}
-
-Donald Knuth wrote ``The Art of Computer Programming'' \cite{knuth1997art}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{example-image-a}
-    \caption{An example image.}
-    \label{fig:example-image-a}
-\end{figure}
 
 \begin{listing}[H]
     \begin{minted}{haskell}
@@ -48,7 +48,41 @@ Donald Knuth wrote ``The Art of Computer Programming'' \cite{knuth1997art}.
     \label{listing:haskell-lasagne-monoid}
 \end{listing}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image-a}
+    \caption{An example image.}
+    \label{fig:example-image-a}
+\end{figure}
 
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{example-image-a}
+         \caption{Example image A.}
+         \label{fig:example-image-a-side}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{example-image-b}
+         \caption{Example image A.}
+         \label{fig:example-image-b-side}
+     \end{subfigure}
+     \caption{Two example images.}
+     \label{fig:side-by-side}
+\end{figure}
+
+\begin{equation}
+    S = \frac{1}{f + \frac{1-f}{P}}
+    \label{eq:amdahls-law}
+\end{equation}
+
+\begin{align}
+    S &= s + p \times N \\
+      &= N + (1 - N) \times s \label{eq:gustafsons-law}
+\end{align}
 
 \printbibliography[heading=bibnumbered]
 \appendix

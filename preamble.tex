@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{appendix}
 \usepackage{placeins}
+\usepackage{subcaption}
 
 % Configure hyperlinks
 \usepackage{url}
@@ -54,6 +55,8 @@
 \newcommand{\abstracttext}[1]{\renewcommand{\@abstracttext}{#1}}
 \newcommand{\@abstractkeywords}[0]{}
 \newcommand{\abstractkeywords}[1]{\renewcommand{\@abstractkeywords}{#1}}
+\newcommand{\@wordcount}[0]{}
+\newcommand{\wordcount}[1]{\renewcommand{\@wordcount}{#1}}
 
 \renewcommand\maketitle{
 {\raggedright
@@ -78,6 +81,10 @@
         \ifdefempty{\@abstractkeywords}{}{
             \\\\
             \noindent\ignorespaces\textbf{Keywords: }\@abstractkeywords
+        }
+        \ifdefempty{\@wordcount}{}{
+            \\\\
+            \noindent\ignorespaces\textbf{Word count: }\@wordcount
         }
     \end{abstract}
 }
