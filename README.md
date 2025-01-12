@@ -4,6 +4,10 @@
 
 An example document can be found [here](https://github.com/EdmundGoodman/report-template/releases/download/example-document/Essay_template.pdf).
 
+The easiest way to use this template is to move the snippets after `\end{document}`
+so they can easily be copied as needed later, but are out of the way, then delete
+all content between `\maketitle` and `\printbibliography[heading=bibnumbered]`.
+
 ## Goals & features
 
 - Pleasant typesetting/font/style decisions
