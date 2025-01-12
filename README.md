@@ -20,3 +20,7 @@ An example document can be found [here](https://github.com/EdmundGoodman/report-
 - [ ] Add linting in pre-commit
   - <https://tex.stackexchange.com/questions/163/is-there-a-program-equivalent-to-lint-for-latex>
   - <https://github.com/jonasbb/pre-commit-latex-hooks>
+- [ ] Fix automatic word count generation
+  - <https://tex.stackexchange.com/a/631602>
+     
+**PRs to resolve these TODOs are welcome :smiley:**
