@@ -2,7 +2,14 @@
 
 > A minimal LaTeX report template.
 
+An example document can be found [here](https://github.com/EdmundGoodman/report-template/releases/download/example-document/Essay_template.pdf).
+
 ## Goals & features
+
+- Pleasant typesetting/font/style decisions
+- Convenient title generation for general short essay/report use-cases
+- Snippets you'll actually use
+- Support for Overleaf and VSCode editing
 
 ## Usage with Overleaf
 
