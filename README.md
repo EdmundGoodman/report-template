@@ -22,5 +22,8 @@ An example document can be found [here](https://github.com/EdmundGoodman/report-
   - <https://github.com/jonasbb/pre-commit-latex-hooks>
 - [ ] Fix automatic word count generation
   - <https://tex.stackexchange.com/a/631602>
+- [ ] Include examples of tabular data, including wrapping over pages
+- [ ] Add documentation for usage with Overleaf/VSCode
+- [ ] Improve abstract/keywords/etc. of example document
      
 **PRs to resolve these TODOs are welcome :smiley:**
